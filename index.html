@@ -5,53 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio - Anderson</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Olá, eu sou Anderson 👋</h1>
-    <p>Meu portfólio está no ar!</p>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand" href="#home">Anderson</a>
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+        <span></span>
+      </button>
+      <nav class="nav-menu" aria-label="Menu principal">
+        <ul id="primary-navigation" data-visible="false">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-backdrop" data-visible="false" tabindex="-1"></div>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre mim</h2>
-    <p>Sou desenvolvedor apaixonado por tecnologia, com experiência em Python, Java e sistemas web. 
-       Aqui compartilho meus projetos e aprendizados.</p>
-  </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content container">
+        <span class="eyebrow">Portfólio pessoal</span>
+        <h1>Olá, eu sou Anderson 👋</h1>
+        <p>Desenvolvedor Full Stack focado em soluções práticas, interfaces limpas e experiências web rápidas.</p>
+        <a href="#projetos" class="btn">Ver meus projetos</a>
+      </div>
+    </section>
 
-  <section id="projetos">
-    <h2>Projetos</h2>
-    <div class="projeto-card">
-      <h3>Projeto 1</h3>
-      <p>Descrição breve do projeto. Tecnologias usadas: HTML, CSS, JavaScript.</p>
-      <a href="#">Ver no GitHub</a>
-    </div>
-    <div class="projeto-card">
-      <h3>Projeto 2</h3>
-      <p>Descrição breve do projeto. Tecnologias usadas: Python.</p>
-      <a href="#">Ver no GitHub</a>
-    </div>
-    <!-- Adicione mais cards conforme necessário -->
-  </section>
+    <section id="sobre">
+      <div class="container">
+        <h2>Sobre mim</h2>
+        <p>Sou estudante de Análise e Desenvolvimento de Sistemas, com foco em construir soluções práticas e eficientes através da tecnologia. Tenho experiência em desenvolvimento web utilizando HTML, CSS e versionamento com Git e GitHub, além de conhecimentos em lógica de programação e banco de dados.</p>
+      </div>
+    </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Você pode me encontrar em:</p>
-    <ul>
-      <li><a href="mailto:seuemail@example.com">Email</a></li>
-      <li><a href="https://github.com/seuusuario" target="_blank">GitHub</a></li>
-      <li><a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a></li>
-    </ul>
-  </section>
+    <section id="habilidades">
+      <div class="container">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+          <article class="skill">
+            <i class="fab fa-python" aria-hidden="true"></i>
+            <h3>Python</h3>
+            <p>Desenvolvimento backend, automação e análise de dados.</p>
+          </article>
+          <article class="skill">
+            <i class="fab fa-js-square" aria-hidden="true"></i>
+            <h3>JavaScript</h3>
+            <p>Frontend e backend com Node.js.</p>
+          </article>
+          <article class="skill">
+            <i class="fab fa-react" aria-hidden="true"></i>
+            <h3>React</h3>
+            <p>Criação de interfaces dinâmicas e responsivas.</p>
+          </article>
+          <article class="skill">
+            <i class="fab fa-html5" aria-hidden="true"></i>
+            <h3>HTML/CSS</h3>
+            <p>Design web responsivo e acessível.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="container">
+        <h2>Projetos</h2>
+        <div class="projects-grid">
+          <article class="projeto-card">
+            <h3>Loja Virtual</h3>
+            <p>Uma loja virtual completa desenvolvida com HTML, CSS e JavaScript, simulando um e-commerce funcional.</p>
+            <a href="https://github.com/an2949260-stack/LOJA_VIRTUAL_HTML" target="_blank" rel="noopener noreferrer" class="btn">Ver no GitHub</a>
+          </article>
+          <article class="projeto-card">
+            <h3>App Bancário</h3>
+            <p>Aplicação bancária desenvolvida em Python, com funcionalidades de conta corrente e transações.</p>
+            <a href="https://github.com/an2949260-stack/APP_BANC-RIO" target="_blank" rel="noopener noreferrer" class="btn">Ver no GitHub</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>Estou disponível para oportunidades e colaborações. Fale comigo pelos canais abaixo.</p>
+        <div class="contact-grid">
+          <a href="mailto:al60348@gmail.com" class="contact-card">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://wa.me/5511970986396" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://github.com/an2949260-stack" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/anderson-nascimento-01ab592bb/" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2026 Anderson - Todos os direitos reservados</p>
+    <div class="container footer-content">
+      <p>&copy; 2026 Anderson. Todos os direitos reservados.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
